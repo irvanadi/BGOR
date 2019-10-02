@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/gradiend_dsbrd"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.InsertDataActivity">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_field"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RadioGroup
+        android:id="@+id/pilihan"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/batmin"
+                android:layout_marginRight="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batminton" />
+
+            <RadioButton
+                android:id="@+id/basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basket" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/futsal"
+                android:layout_marginRight="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Futsal" />
+
+            <RadioButton
+                android:id="@+id/voly"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volly" />
+
+        </LinearLayout>
+
+
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/indeks"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilihan">
+
+        <AutoCompleteTextView
+            android:id="@+id/idks"
+            android:layout_marginLeft="40dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Lapangan Ke -"
+            android:imeOptions="actionUnspecified"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/harga"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintEnd_toEndOf="@+id/indeks"
+        app:layout_constraintStart_toStartOf="@+id/indeks"
+        app:layout_constraintTop_toBottomOf="@+id/indeks">
+
+        <AutoCompleteTextView
+            android:id="@+id/hrg"
+            android:layout_width="300dp"
+            android:layout_marginLeft="40dp"
+            android:layout_height="wrap_content"
+            android:hint="Harga Per Jam"
+            android:imeOptions="actionUnspecified"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/tambah1"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bourdered_insert_data"
+        android:text="TAMBAH"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/harga"
+        app:layout_constraintStart_toStartOf="@+id/harga"
+        app:layout_constraintTop_toBottomOf="@+id/harga" />
+
+</android.support.constraint.ConstraintLayout>
+
+</ScrollView>

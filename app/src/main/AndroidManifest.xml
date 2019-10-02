@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xeylyne.project">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_stadiume"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_stadiume"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activitys.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activitys.RegisterActivity"
+            android:label="Register User" />
+        <activity android:name=".Activitys.DashUActivity" />
+        <activity
+            android:name=".Activitys.BadmintonActivity"
+            android:label="Badminton" />
+        <activity
+            android:name=".Activitys.BasketActivity"
+            android:label="Basketball" />
+        <activity
+            android:name=".Activitys.FutsalActivity"
+            android:label="Futsal" />
+        <activity
+            android:name=".Activitys.VollyActivity"
+            android:label="Volly" />
+        <activity android:name=".Activitys.DashOActivity" />
+        <activity android:name=".Activitys.InsertDataActivity" />
+        <activity android:name=".Activitys.Show_O_Activity" />
+        <activity android:name=".Activitys.InsertDataGORActivity" />
+        <activity android:name=".Activitys.List_LapUserActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Activitys.MapsBadmintonActivity"
+            android:label="Maps" />
+        <activity
+            android:name=".Activitys.MapsBasketActivity"
+            android:label="@string/title_activity_maps_basket" />
+        <activity
+            android:name=".Activitys.MapsFutsalActivity"
+            android:label="@string/title_activity_maps_futsal" />
+        <activity
+            android:name=".Activitys.VollyMapsActivity"
+            android:label="@string/title_activity_volly_maps" />
+        <activity android:name=".Activitys.TransActivity" />
+        <activity
+            android:name=".Activitys.MapsAllActivity"
+            android:label="@string/title_activity_maps_all"></activity>
+        <activity
+            android:name=".Activitys.UpdateDataGORActivity"
+            android:label="Update Data">
+
+        </activity>
+    </application>
+
+</manifest>

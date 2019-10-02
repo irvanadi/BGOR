@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="-20dp"
+    tools:context=".Activitys.LoginActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/hdr"
+            android:layout_width="0dp"
+            android:layout_height="256dp"
+            android:background="#0088ff"
+            app:layout_constraintDimensionRatio="16;9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="178dp"
+            android:layout_height="177dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/kotak"
+            android:layout_width="300dp"
+            android:layout_height="305dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.0"
+            android:background="@drawable/bordered_background" />
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ps1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/kotak">
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ps1"
+            android:layout_width="250dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/email1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/email1"
+            app:layout_constraintTop_toBottomOf="@id/email1">
+
+            <AutoCompleteTextView
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:imeActionId="6"
+                android:imeActionLabel="masuk"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/masuk"
+            style="?android:textAppearanceSmall"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="masuk"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_border"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toTopOf="@+id/dft"
+            app:layout_constraintEnd_toEndOf="@+id/ps1"
+            app:layout_constraintStart_toStartOf="@+id/ps1"
+            app:layout_constraintTop_toBottomOf="@+id/ps1" />
+
+        <TextView
+            android:id="@+id/dft"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Daftar Akun"
+            android:textColor="#0088ff"
+            android:textStyle="bold"
+            android:layout_marginStart="200dp"
+            app:layout_constraintBottom_toBottomOf="@+id/kotak"
+            app:layout_constraintEnd_toEndOf="@+id/masuk"
+            app:layout_constraintStart_toStartOf="@+id/masuk"
+            app:layout_constraintTop_toBottomOf="@+id/masuk" />
+
+
+        <TextView
+            android:id="@+id/tempt"
+            android:layout_width="314dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="BOKING TEMPAT OLAHRAGA"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kotak"
+            app:layout_constraintVertical_bias="0.891" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</ScrollView>

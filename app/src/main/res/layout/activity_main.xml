@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradiend_dsbrd"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.DashUActivity">
+
+
+    <ImageView
+        android:id="@+id/voly"
+        android:layout_width="93dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/volleyball"
+        app:layout_constraintBottom_toTopOf="@+id/vly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bola"
+        app:layout_constraintTop_toTopOf="@id/bola"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/vly"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="VOLLYBALL"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/voly"
+        app:layout_constraintStart_toStartOf="@+id/voly"
+        app:layout_constraintBottom_toTopOf="@+id/bultang"
+        app:layout_constraintTop_toBottomOf="@+id/voly" />
+
+
+    <ImageView
+        android:id="@+id/bola"
+        android:layout_width="96dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/football"
+        app:layout_constraintBottom_toTopOf="@+id/bla"
+        app:layout_constraintEnd_toStartOf="@+id/voly"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/bla"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="FUTSAL"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/basket"
+        app:layout_constraintEnd_toEndOf="@+id/bola"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="@+id/bola"
+        app:layout_constraintTop_toBottomOf="@+id/bola" />
+
+    <ImageView
+        android:id="@+id/basket"
+        android:layout_width="96dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/basketball"
+        app:layout_constraintBottom_toTopOf="@+id/bskt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bultang"
+        app:layout_constraintTop_toBottomOf="@+id/bla" />
+
+    <TextView
+        android:id="@+id/bskt"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="BASKET"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="@+id/basket"
+        app:layout_constraintStart_toStartOf="@+id/basket"
+        app:layout_constraintTop_toBottomOf="@+id/basket" />
+
+    <ImageView
+        android:id="@+id/bultang"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/shuttlecock"
+        app:layout_constraintBottom_toTopOf="@id/bltg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/basket"
+        app:layout_constraintTop_toBottomOf="@+id/vly"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/bltg"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:text="BULUTANGKIS"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bultang"
+        app:layout_constraintStart_toStartOf="@+id/bultang"
+        app:layout_constraintTop_toBottomOf="@+id/bultang" />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#0088ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+
+</android.support.constraint.ConstraintLayout>
